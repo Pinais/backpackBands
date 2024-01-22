@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://5clyre033dtr"]
+
+[ext_resource type="Script" path="res://Recursos.gd" id="1_rvt78"]
+
+[node name="Recursos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rvt78")
+
+[node name="money_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 39.0
+offset_right = 103.0
+offset_bottom = 62.0
+text = "$$"
+
+[node name="level_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 71.0
+offset_right = 102.0
+offset_bottom = 94.0
+text = "0"
+
+[node name="level_prog_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 72.0
+offset_right = 136.0
+offset_bottom = 99.0
