@@ -22,12 +22,20 @@ func _ready():
 func _process(delta):
 	if int(delta)%7 == 0:
 		add_experience(1)
+	if Input.is_action_just_pressed("mb1"):
+		add_money(100)
+	elif Input.is_action_just_pressed("mb2"): 
+		add_money(-150)
 
 
 func add_money(amount:int):
-	money += amount
-	var aux = money_string % str(money)
-	money_label.text = aux
+	var temp = money + amount
+	if temp >= 0:
+		money = temp
+		var aux = money_string % str(money)
+		money_label.text = aux
+	else:
+		print("Can't buy that")
 
 
 func add_experience(amount:int):
